@@ -82,7 +82,7 @@ Program Features
 √ Global hot keys are supported and various shortcut keys are available.
 √ And many, many more. Just try it out. 
     </description>
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <releaseNotes>https://www.binisoft.org/changelog.txt</releaseNotes>
     <!-- =============================== -->      
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
