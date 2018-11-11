@@ -1,4 +1,4 @@
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+﻿$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $ErrorActionPreference = 'Stop';
 $packageArgs = @{
