@@ -29,7 +29,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <version>5.4.0.0</version>
     <packageSourceUrl>https://github.com/tkersten09/windowsfirewallcontrol.git</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
-    <owners>oblivious187</owners>
+    <owners>tkersten09</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
