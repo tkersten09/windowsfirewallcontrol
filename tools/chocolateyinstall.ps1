@@ -14,6 +14,6 @@ $packageArgs = @{
 
 Get-ChocolateyWebFile @packageArgs
 
-Start-Process $toolsDir\wfc5setup.exe
+Start-Process $toolsDir\wfc5setup.exe -Verb "runas"
 Start-Process autohotkey -Wait -ArgumentList '.\install-windows-firewall-control.ahk' -WorkingDirectory $toolsDir
 Remove-Item $toolsDir\*.exe -ea 0 -force

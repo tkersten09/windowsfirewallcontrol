@@ -15,10 +15,10 @@ $uninstalled = $false
 if ($key.Count -eq 1) {
   $key | % { 
     $packageArgs['file'] = "$($_.UninstallString)"
-    #separating path of exe from the argument
     [array]$str = $packageArgs['file'] -Split " -"
     $packageArgs['file'] = $str[0]
-    Start-Process $packageArgs['file'] -ArgumentList '-uninstall'
+    
+    Start-Process $packageArgs['file'] -ArgumentList '-uninstall' -Verb 'runas'
     Start-Process autohotkey -Wait -ArgumentList '.\uninstall-windows-firewall-control.ahk' -WorkingDirectory $toolsDir
   }
 } elseif ($key.Count -eq 0) {
