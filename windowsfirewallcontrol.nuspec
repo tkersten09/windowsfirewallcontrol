@@ -26,7 +26,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>5.4.0.0</version>
+    <version>6.0.2.0</version>
     <packageSourceUrl>https://github.com/tkersten09/windowsfirewallcontrol.git</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>tkersten09</owners>
@@ -47,19 +47,20 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
-    <tags>windowsfirewallcontrol Windows Firewall Control</tags>
+    <tags>windowsfirewallcontrol Windows Firewall Control WFC binisoft malwarebytes</tags>
     <summary>Windows Firewall Control is a powerful tool which extends the functionality of Windows Firewall and provides new extra features which makes Windows Firewall better. </summary>
     <description>
-Windows Firewall Control runs in the system tray and allows the user to control the native firewall easily without having to waste time by navigating to the specific part of the firewall. This is the best tool to manage the native firewall from Windows 10, 8.1, 8, 7, Server 2016, Server 2012. 
+## Windows Firewall Control - Managing Windows Firewall is now easier than ever
+Program Overview
 
-Windows Firewall Control offers four filtering modes which can be switched with just a mouse click:
+Windows Firewall Control is a powerful tool which extends the functionality of Windows Firewall and provides new extra features which makes Windows Firewall better. It runs in the system tray and allows the user to control the native firewall easily without having to waste time by navigating to the specific part of the firewall. This is the best tool to manage the native firewall from Windows 10, 8.1, 8, 7, Server 2016, Server 2012. Windows Firewall Control offers four filtering modes which can be switched with just a mouse click:
 
 High Filtering - All outbound and inbound connections are blocked. This profile blocks all attempts to connect to and from your computer.
 Medium Filtering - Outbound connections that do not match a rule are blocked. Only the programs that you allow can initiate outbound connections.
 Low Filtering - Outbound connections that do not match a rule are allowed. The user can block the programs he doesn't want to allow initiating outbound connections.
 No Filtering - Windows Firewall is turned off. Avoid using this setting unless you have another firewall running on your computer.
 
-Windows Firewall Control doesn't do any packet filtering and does not block or allow any connection. This is done by Windows Firewall itself based on the existing firewall rules. 
+Windows Firewall Control doesn't do any packet filtering and does not block or allow any connection. This is done by Windows Firewall itself based on the existing firewall rules.
 Program Features
 
 √ Notifications of outbound blocked connections.
@@ -80,25 +81,25 @@ Program Features
 √ Protection to unauthorized uninstallation.
 √ Possibility to restore previous settings at uninstallation.
 √ Global hot keys are supported and various shortcut keys are available.
-√ And many, many more. Just try it out. 
+√ Integrated multi language support in 29 languages.
+√ And many, many more. Just try it out.
+
+## System Requirements
+
+√ Microsoft .NET Framework version 4.5 or a newer version.
+√ Compatible with all x86 and x64 versions of Windows 10, 8.1, 8, 7, Server 2016, Server 2012.
+√ Windows Firewall service is required to be enabled for Windows Firewall Control to run.
+√ DNS Client service is required to be enabled for the notifications to work properly.
+Known Limitations
+
+√ Windows Firewall is incompatible with software proxies, web filtering modules, NDIS drivers and any other security software that may redirect the traffic from Windows Firewall to their own filtering module.
+√ Due to multiple system configurations and software installed there may be incompatibility problems. Please report them and help us to improve Windows Firewall Control. Thank you for your support!
     </description>
     <releaseNotes>https://www.binisoft.org/changelog.txt</releaseNotes>
-    <!-- =============================== -->      
-
-    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
     <dependencies>
-      <dependency id="autohotkey" version="1.1" />
+      <dependency id="autohotkey.portable" version="1.1" />
       <dependency id="chocolatey-core.extension" version="1.1.0" />
     </dependencies>
-    <!-- chocolatey-core.extension - https://chocolatey.org/packages/chocolatey-core.extension
-         - You want to use Get-UninstallRegistryKey on less than 0.9.10 (in chocolateyUninstall.ps1)
-         - You want to use Get-PackageParameters and on less than 0.11.0
-         - You want to take advantage of other functions in the core community maintainer's team extension package
-    -->
-
-    <!--<provides>NOT YET IMPLEMENTED</provides>-->
-    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
-    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
