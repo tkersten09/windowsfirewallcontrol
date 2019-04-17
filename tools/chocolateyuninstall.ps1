@@ -3,21 +3,20 @@
 $ErrorActionPreference = 'Stop';
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'Windows Firewall Control*'
+  softwareName  = 'Malwarebytes Windows Firewall Control*'
   fileType      = 'exe'
   silentArgs    = ''
   validExitCodes= @(0)
 }
 
-$uninstalled = $false
 [array]$key = Get-UninstallRegistryKey -SoftwareName $packageArgs['softwareName']
 
 if ($key.Count -eq 1) {
-  $key | % { 
+  $key | % {
     $packageArgs['file'] = "$($_.UninstallString)"
     [array]$str = $packageArgs['file'] -Split " -"
     $packageArgs['file'] = $str[0]
-    
+
     Start-Process $packageArgs['file'] -ArgumentList '-uninstall' -Verb 'runas'
     Start-Process autohotkey -Wait -ArgumentList '.\uninstall-windows-firewall-control.ahk' -WorkingDirectory $toolsDir
   }
